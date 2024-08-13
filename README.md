@@ -1,6 +1,6 @@
-# PHP MVC Framework
+# PHP Project structure
 
-This project is a lightweight PHP MVC (Model-View-Controller) framework designed to provide a clean and organized structure for building web applications. The framework includes routing, controller management, and page rendering functionalities.
+This project is a lightweight PHP MVC (Model-View-Controller) project structure designed to provide a clean and organized structure for building web applications. The project includes routing, controller management, and page rendering functionalities.
 
 ## Project Structure
 
