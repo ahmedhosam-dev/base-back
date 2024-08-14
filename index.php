@@ -14,7 +14,7 @@
  */
 
 // Get route function from controllers
-require './BASE/RouteHandler.php';
+require '/BASE/RouteHandler.php';
 
 // Get the requested URL
 $request_url = $_SERVER['REQUEST_URI'];
