@@ -25,13 +25,13 @@ The project is organized into the following key directories and files:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone https://github.com/ahmedhosam-dev/base-back.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd yourproject
+   cd base-back
    ```
 
 3. Set up your web server to point to the project directory. For example, with Apache:
