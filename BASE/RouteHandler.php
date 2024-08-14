@@ -16,10 +16,10 @@
 function route(string $uri)
 {
     // Include the file that defines the routes
-    require_once __DIR__ . '/../Routes/route.php';
+    require __DIR__ . '/../Routes/route.php';
 
     // Include the file that handles route control logic
-    require_once __DIR__ . '/__CONTROL_ROUTE.php';
+    require __DIR__ . '/__CONTROL_ROUTE.php';
 
     // Define the routes using the pattern and function name associations
     /* ! Ensure that no two functions have the same name ! */
@@ -30,12 +30,12 @@ function route(string $uri)
         if (preg_match("#^$pattern$#", $uri, $matches)) {
             try {
                 // Import the controller associated with the route and call the function
-                include_once import_controller($func[0]);
+                require import_controller($func[0]);
                 call_user_func($func);
                 exit();
             } catch (Exception $e) {
                 // Handle any exceptions by calling the fallback function for the route
-                include_once import_controller($func[0]);
+                require import_controller($func[0]);
                 call_user_func(end($routes));
                 exit();
             }
@@ -43,7 +43,7 @@ function route(string $uri)
     }
     
     // If no routes match, handle the unknown URI with a default fallback route
-    include_once import_controller(end($routes)[0]);
+    require import_controller(end($routes)[0]);
     call_user_func(end($routes));
     exit();
 }

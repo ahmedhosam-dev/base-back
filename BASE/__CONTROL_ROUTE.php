@@ -15,7 +15,7 @@
 function import_controller($className)
 {
     // Include the file that contains the list of available controllers
-    require_once __DIR__ . '\..\Controllers\Controllers.php';
+    require_once __DIR__ . '/../Controllers/Controllers.php';
 
     // Loop through the list of controllers to find the one that matches the class name
     foreach(CONTROLLERS as $fileName => $controllerClass)
@@ -25,14 +25,14 @@ function import_controller($className)
             for ($index = 0; $i < sizeof($controllerClass); $i++){
                 if($className == $controllerClass)
                 {
-                    return __DIR__ . '\..\Controllers\\' . $fileName . '.php';
+                    return __DIR__ . '/../Controllers/' . $fileName . '.php';
                 }
             }
         }
         // If the class name matches, return the path to the controller file
         if($className == $controllerClass)
         {
-            return __DIR__ . '\..\Controllers\\' . $fileName . '.php';
+            return __DIR__ . '/../Controllers/' . $fileName . '.php';
         }
     }
 }

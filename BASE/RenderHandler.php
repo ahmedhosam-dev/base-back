@@ -17,11 +17,11 @@ function render(string $page, array $context = []) {
     if (array_key_exists(0, $context)){
         // Make the context data available and include the specified page
         $context;
-        require __DIR__ . "\..\pages\\" . $page . ".php";
+        require __DIR__ . "/../pages/" . $page . ".php";
         exit();
     } else {
         // If no context is provided, simply include the specified page
-        require __DIR__ . "\..\pages\\" . $page . ".php";
+        require __DIR__ . "/../pages/" . $page . ".php";
         exit();
     }
 }
